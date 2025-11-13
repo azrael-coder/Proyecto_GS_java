@@ -1,3 +1,5 @@
+/*Dado un número N entero positivo que se introducirá por teclado, genera una tabla
+formada por los cuadrados y los cubos de los números desde 1 hasta N.*/
 package Hoja4;
 import java.util.Scanner;
 public class Ejercicio26 {
