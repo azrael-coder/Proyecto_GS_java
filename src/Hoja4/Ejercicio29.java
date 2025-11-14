@@ -5,13 +5,18 @@ public class Ejercicio29 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese un numero: ");
-        float factorial = sc.nextFloat();
+        int num = sc.nextInt();
 
-        int i,fact=1;
-        for (i = 1; i <= factorial; i++) {
-            fact = fact * i;
+        int factorial = 1;
+        System.out.print(num+"!=");
+        for (int contador = num; contador >= 1; contador--) {
+            if(contador > 1)
+                System.out.print(contador+"*");
+            else
+                System.out.print(contador);
+
+            factorial = factorial * contador;
         }
-        System.out.println("El factorial de "+factorial+" es "+fact);
+        System.out.print(" = " + factorial);
     }
 }
-
