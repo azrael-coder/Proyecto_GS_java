@@ -3,7 +3,7 @@ formada por los cuadrados y los cubos de los números desde 1 hasta N.*/
 package Hoja4;
 import java.util.Scanner;
 public class Ejercicio26 {
-    static public void main(String[] args){
+    public static void main(String[] args){
         Scanner teclado = new Scanner(System.in);
 
         System.out.print("Ingrese un numero: ");

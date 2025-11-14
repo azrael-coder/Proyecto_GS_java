@@ -13,7 +13,7 @@ package Hoja4;
 //Si las condiciones resultan estables, el piloto obtiene 5 puntos adicionales de preparación.
 import java.util.Random;
 public class Ejercicio_uriel {
-    void main(){
+    public static void main(String[] args){
         Random random = new Random();
         double[] array = new double[15];
         int min = 50;
@@ -25,12 +25,11 @@ public class Ejercicio_uriel {
         }
 
         double mayor = array[0]; //bucle para hayar la presion maxima
+        double menor = array[0];
         for (double n : array){
             if (n > mayor)
                 mayor = n;
-        }
-        double menor = array[0]; //bucle para hayar la presion minima
-        for ( double n : array){
+
             if (n < menor)
                 menor = n;
         }
@@ -41,31 +40,29 @@ public class Ejercicio_uriel {
         }
         prom = prom/15;
 
-            IO.println("Lecturas obtenidas:");
+            System.out.println("Lecturas obtenidas:");
             for ( double n : array) //bucle para las lecturas
-                IO.println(n);
+                System.out.println(n);
 
-            IO.println("------------------------");
+            System.out.println("------------------------");
 
-            IO.println("La presion maxima es: "+mayor+" y la minima es: "+menor);
+            System.out.println("La presion maxima es: "+mayor+" y la minima es: "+menor);
 
-            IO.println("------------------------");
-                IO.println("El promedio es: "+prom);
+            System.out.println("------------------------");
+                System.out.println("El promedio es: "+prom);
 
             if (prom >= 90 && prom <= 110){
-                IO.println("Condiciones de vuelo estables, obtiene 5 puntos de preparacion");
+                System.out.println("Condiciones de vuelo estables, obtiene 5 puntos de preparacion");
             } else
-                IO.println("Inestabilidad detectada, revisar parámetros de presión");
+                System.out.println("Inestabilidad detectada, revisar parámetros de presión");
 
-            IO.println("------------------------");
+            System.out.println("------------------------");
 
             if (mayor > 140){
-                IO.println("¡Presión crítica detectada, riesgo de rotura del fuselaje!");
+                System.out.println("¡Presión crítica detectada, riesgo de rotura del fuselaje!");
             } else if (menor < 95){
-                IO.println("Advertencia: presión baja, posible fuga de aire en la cabina");
+                System.out.println("Advertencia: presión baja, posible fuga de aire en la cabina");
             }
-
-
 
     }
 }

@@ -7,6 +7,6 @@ public class Ejercicio20 {
             double cuadrado = Math.pow(i,2);
             suma = suma + cuadrado;
         }
-        IO.println(suma);
+        System.out.println(suma);
     }
 }

@@ -1,7 +1,7 @@
 package Hoja4;
 import java.util.Scanner;
 public class Ejercicio7 {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner cadena = new Scanner(System.in);
 
         System.out.print("Introdusca una frase con letras y numeros: ");

@@ -4,9 +4,9 @@ public class Animacion {
         char [] ruedita = {'|', '/', '-', '\\' };
 
         for (int i = 0; i < 25; i++){
-            IO.print("\rCagando " + ruedita[i % ruedita.length]);
+            System.out.print("\rCagando " + ruedita[i % ruedita.length]);
             Thread.sleep(250);
         }
-        IO.println("\rCarga completada  \n");
+        System.out.println("\rCarga completada  \n");
     }
 }
