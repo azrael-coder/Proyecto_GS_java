@@ -4,7 +4,7 @@ public class Animacion {
         char [] ruedita = {'|', '/', '-', '\\' };
 
         for (int i = 0; i < 25; i++){
-            System.out.print("\rCagando " + ruedita[i % ruedita.length]);
+            System.out.print("\rGuardando partida " + ruedita[i % ruedita.length]);
             Thread.sleep(250);
         }
         System.out.println("\rCarga completada  \n");
