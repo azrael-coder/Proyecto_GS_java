@@ -14,9 +14,6 @@ public class Ejercicio12 {
 
             objeto.nextLine(); //Limpiar el buffer de lectura para que el String se lea bien y no de la exepcion
 
-            if (edad == 0) {
-                break;
-            }
 
             System.out.println("Ingrese su sexo: ");
             String sexoinput = objeto.nextLine();

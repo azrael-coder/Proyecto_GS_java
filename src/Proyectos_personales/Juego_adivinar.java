@@ -1,4 +1,4 @@
-// @Azrael
+// @author_Azrael
 package Proyectos_personales;
 import Hoja4.Animacion;
 import java.util.Random;
