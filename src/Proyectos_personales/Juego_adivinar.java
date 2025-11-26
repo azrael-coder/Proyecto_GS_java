@@ -9,7 +9,7 @@ public class Juego_adivinar {
         Random rand = new Random();
 
         System.out.print("ELIGE SABIAMENTE LA DIFICULTAD --> ");
-        System.out.println("1= 1 hasta 10| 2= hasta 15| 3= hasta 20");
+        System.out.println("1= 1 hasta 10 | 2= hasta 15 | 3= hasta 20");
             num_dificultad = sc.nextInt();
             do {
                 if (num_dificultad > 3) {
@@ -19,7 +19,7 @@ public class Juego_adivinar {
             }while(num_dificultad > 3);
 
         if (num_dificultad == 1)
-            return new int[]{rand.nextInt(10) + 1, 3};
+            return new int[]{rand.nextInt(10) + 1, 3}; //devuelve el num aleatorio segun la dificultad y el numero posible de intentos
         else if (num_dificultad == 2)
             return new int[]{rand.nextInt(15) + 1, 5};
 
