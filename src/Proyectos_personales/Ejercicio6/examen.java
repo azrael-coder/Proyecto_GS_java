@@ -29,7 +29,14 @@ public class examen {
 
                     num /= 10;
                 }
+
+                System.out.println("Numeros pares: "+contPares);
+                System.out.println("Impares: "+ contImpares);
             }
         } while (num != 0);
+
+
+
+
     }
 }
