@@ -3,9 +3,9 @@ public class CuentaBancaria {
     private final String titular;
     private double saldo;
 
-    public  CuentaBancaria(String titular, double saldo){
+    public CuentaBancaria(String titular, double saldoInicial) {
         this.titular = titular;
-        this.saldo = saldo;
+        this.saldo = saldoInicial;
     }
 
     public void depositar( double cantidad){
@@ -14,7 +14,7 @@ public class CuentaBancaria {
     }
 
     public void retirar(double cantidad){
-        if (cantidad > 0 && cantidad <= saldo)
+        if (cantidad > 0 && saldo >= cantidad)
             saldo -= cantidad;
     }
 
@@ -23,10 +23,22 @@ public class CuentaBancaria {
         System.out.println("Saldo: "+saldo);
     }
 
-    public boolean numerosRojos(){
-        if(saldo < 0)
-            return true;
+    public boolean numerosRojos() {
+        if (saldo < 0)
+            return  true;
         else
             return false;
+
     }
+
+    public void transferir (double cantidad, CuentaBancaria otraCuenta ){
+        if (cantidad > 0 && saldo >= cantidad) {
+            this.retirar(cantidad);
+            otraCuenta.depositar(cantidad);
+        }else
+            System.out.println("Saldo insuficiente");
+    }
+
+
+
 }
