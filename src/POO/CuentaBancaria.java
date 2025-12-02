@@ -8,6 +8,8 @@ public class CuentaBancaria {
         this.saldo = saldoInicial;
     }
 
+
+
     public void depositar( double cantidad){
         if (cantidad > 0)
             saldo += cantidad;
@@ -21,6 +23,7 @@ public class CuentaBancaria {
     public void mostrarInfo(){
         System.out.println("Titular: "+titular);
         System.out.println("Saldo: "+saldo);
+        System.out.println("----------");
     }
 
     public boolean numerosRojos() {
