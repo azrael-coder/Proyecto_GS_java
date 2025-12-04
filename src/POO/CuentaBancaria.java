@@ -1,5 +1,5 @@
 package POO;
-
+/*CLASE PARA MODELAR LAS CUENTAS*/
 public class CuentaBancaria {
     private String titular;
     private double saldo;
