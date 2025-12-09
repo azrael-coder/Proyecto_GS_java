@@ -16,7 +16,8 @@ public class CuentaBancaria {
         }
     }
 
-    public boolean depositar( double cantidad){
+
+    boolean depositar( double cantidad){
         if (cantidad > 0) {
             saldo += cantidad;
             return true;
@@ -26,7 +27,8 @@ public class CuentaBancaria {
         }
     }
 
-    public boolean retirar(double cantidad) {
+
+    boolean retirar(double cantidad) {
         if (cantidad > 0 && saldo >= cantidad){
             saldo -= cantidad;
         return true;
@@ -36,7 +38,8 @@ public class CuentaBancaria {
         }
     }
 
-    public void mostrarInfo(){
+
+    void mostrarInfo(){
         System.out.println("Titular: "+titular);
         System.out.println("Saldo: "+saldo);
         System.out.println("Numero de cuenta: "+numCuenta);
@@ -44,7 +47,7 @@ public class CuentaBancaria {
     }
 
 
-    public boolean transferir (double cantidad, CuentaBancaria otraCuenta ){
+    boolean transferir (double cantidad, CuentaBancaria otraCuenta ){
         if (cantidad > 0 && saldo >= cantidad && otraCuenta != null) {
             this.retirar(cantidad);
             otraCuenta.depositar(cantidad);
@@ -54,21 +57,28 @@ public class CuentaBancaria {
         return false;
 
     }
+
+
     //MOSTRAR SALDO
-    public double getSaldo(){
+    double getSaldo(){
         return saldo;
     }
 
-    //MOSTRAT TITULAR
-    public String getTitular(){
+
+    //OBTENER TITULAR
+    String getTitular(){
         return titular;
     }
-    //MODFICAR EL TITULAR
-    public void setTitular(String titular){
+
+
+    //'MODIFICAR' EL TITULAR
+    void setTitular(String titular){
         this.titular = titular;
     }
-    //MSTRAR EL NUMERO DE CUENTA
-    public int getNumCuenta(){
+
+
+    //OBTENER EL NUMERO DE CUENTA
+    int getNumCuenta(){
         return numCuenta;
     }
 

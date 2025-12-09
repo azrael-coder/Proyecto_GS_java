@@ -1,25 +1,41 @@
 package POO;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
 
-        CuentaBancaria cuenta1 = new CuentaBancaria("israel", 10, 1);
-        CuentaBancaria cuenta2 = new CuentaBancaria("sal", 50, 2);
+        System.out.println("Introduzca su nombre: ");
+        String nombre = input.nextLine();
+
+        System.out.println("Introduzca su saldo: ");
+        double saldo = input.nextDouble();
+
+        System.out.println("Introduzca un numero de cuenta: ");
+        int idCuenta = input.nextInt();
+
+        //VALIDAR EL NUMERO DE CUENTA
+        do{
+            if (idCuenta < 0) {
+                System.out.println("NÚMERO INVALIDO, INTRODUZCA OTRO");
+                idCuenta = input.nextInt();
+            }
+        }while(idCuenta < 0);
 
 
-        cuenta1.depositar(500);
+
+        CuentaBancaria c1 = new CuentaBancaria(nombre, saldo, idCuenta);
+
+        c1.mostrarInfo();
 
 
-        if (cuenta1.transferir(500, cuenta2)){
+        /*if (c1.transferir(500, c2)){
             System.out.println("Transferencia realizada con exito");
-            System.out.println("Saldo actual: "+cuenta1.getSaldo());
+            System.out.println("Saldo actual de: "+c1.getTitular()+"\t"+c1.getSaldo());
             System.out.println("----------");
         }else{
             System.out.println("Transferencia fallida");
         }
-
-        cuenta1.retirar(10);
-        System.out.println("Saldo actual: "+cuenta1.getSaldo());
-
+        */
 
     }
 }
