@@ -17,7 +17,7 @@ public class CuentaBancaria {
     }
 
 
-    boolean depositar( double cantidad){
+    boolean depositar(double cantidad){
         if (cantidad > 0) {
             saldo += cantidad;
             return true;
@@ -73,7 +73,11 @@ public class CuentaBancaria {
 
     //'MODIFICAR' EL TITULAR
     void setTitular(String titular){
-        this.titular = titular;
+        if (titular != "") {
+            this.titular = titular;
+            System.out.println("ok");
+        }else
+            System.out.println("NOMBRE INVALIDO");
     }
 
 
