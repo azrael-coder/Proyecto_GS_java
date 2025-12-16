@@ -1,5 +1,4 @@
-package Hoja1Tema3;
-import org.w3c.dom.css.Rect;
+package Hoja1Tema3.Rectangulo;
 
 public class Rectangulo {
 

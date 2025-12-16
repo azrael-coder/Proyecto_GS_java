@@ -1,14 +1,14 @@
-package Hoja1Tema3;
+package Hoja1Tema3.Persona;
 
 public class Persona {
     private String nombre;
     private int edad;
-    private String genero;
+    private Genero genero;
     private String ocupacion;
 
 
     //CONSTRUCTORES
-    Persona (String nombre, int edad, String genero, String ocupacion){
+    Persona (String nombre, int edad, Genero genero, String ocupacion){
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
@@ -24,9 +24,11 @@ public class Persona {
     /**
      * Lanza un saludo
      */
-    void saludar(){
+    void saludar()  {
         System.out.println("hola soy "+nombre+" y trabajo como "+ocupacion);
     }
+
+
 
     /**
      * Comprueba la edad de la persona
@@ -48,7 +50,7 @@ public class Persona {
      *
      * @return genero: hombre o mujer SOLO ESOS DOS como debe ser
      */
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
@@ -56,7 +58,7 @@ public class Persona {
      *
      * @param genero: HOMBRE O MUJER o VARIOS TIPOS DE TRASTORNOS MENTALES
      */
-    public void setGenero(String genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
@@ -82,4 +84,13 @@ public class Persona {
     }
 
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", genero=" + genero +
+                ", ocupacion='" + ocupacion + '\'' +
+                '}';
+    }
 }

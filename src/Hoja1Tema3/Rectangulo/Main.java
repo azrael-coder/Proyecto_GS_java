@@ -1,4 +1,4 @@
-package Hoja1Tema3;
+package Hoja1Tema3.Rectangulo;
 
 public class Main {
     public static void main(String[] args){
