@@ -14,7 +14,7 @@ public class Main {
 
 
 
-
+        /*
         if (c1.transferir(500, c2)){
             System.out.println("Transferencia realizada con exito");
             System.out.println("Saldo actual de: "+c1.getTitular()+"\t"+c1.getSaldo());
@@ -22,7 +22,7 @@ public class Main {
         }else{
             System.out.println("Transferencia fallida");
         }
-
+        */
 
     }
 }

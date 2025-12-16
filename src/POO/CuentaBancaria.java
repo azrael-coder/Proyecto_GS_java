@@ -3,18 +3,21 @@ package POO;
 public class CuentaBancaria {
     private String titular;
     private double saldo;
-    private final int numCuenta;
+    private  int numCuenta;
 
-    CuentaBancaria (String titular, double saldoInicial, int numCuenta){
+    CuentaBancaria (String titular, double saldoInicial, int numCuenta) {
+
         this.titular = titular;
-        this.numCuenta = numCuenta;
 
-        if (saldoInicial > 0){
+        if (saldoInicial > 0)
             this.saldo = saldoInicial;
-        } else {
-            System.out.println("Saldo invalido");
-        }
+
+        if (numCuenta <= 0)
+            this.numCuenta = numCuenta;
     }
+
+
+
 
 
     boolean depositar(double cantidad){
@@ -38,7 +41,9 @@ public class CuentaBancaria {
         }
     }
 
-
+    /**
+     * Muestra la informacion de las cuentas bancarias
+     */
     void mostrarInfo(){
         System.out.println("Titular: "+titular);
         System.out.println("Saldo: "+saldo);
@@ -47,6 +52,12 @@ public class CuentaBancaria {
     }
 
 
+    /**
+     * Transferencias entre cuentas
+     * @param cantidad es validado antes de ejecutarse
+     * @param otraCuenta otro objeto como parametro
+     * @return true o false dependendiendo si falla o es exitosa
+     */
     boolean transferir (double cantidad, CuentaBancaria otraCuenta ){
         if (cantidad > 0 && saldo >= cantidad && otraCuenta != null) {
             this.retirar(cantidad);
@@ -59,19 +70,20 @@ public class CuentaBancaria {
     }
 
 
-    //MOSTRAR SALDO
+    /**
+     * GETs para todos los atributos Y SETs solo para los no criticos
+     * @return
+     */
     double getSaldo(){
         return saldo;
     }
 
 
-    //OBTENER TITULAR
     String getTitular(){
         return titular;
     }
 
 
-    //'MODIFICAR' EL TITULAR
     void setTitular(String titular){
         if (titular != "") {
             this.titular = titular;
@@ -81,7 +93,6 @@ public class CuentaBancaria {
     }
 
 
-    //OBTENER EL NUMERO DE CUENTA
     int getNumCuenta(){
         return numCuenta;
     }

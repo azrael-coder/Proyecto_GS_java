@@ -20,6 +20,7 @@ public class Persona {
 
     }
 
+
     /**
      * Lanza un saludo
      */
@@ -60,6 +61,10 @@ public class Persona {
     }
 
 
+    /**
+     * GETs Y SETs
+     * @return lo que es evidente
+     */
     public int getEdad() {
         return edad;
     }
@@ -67,8 +72,6 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
-
 
     public String getNombre() {
         return nombre;

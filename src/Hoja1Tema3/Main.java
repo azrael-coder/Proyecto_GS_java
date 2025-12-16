@@ -2,11 +2,15 @@ package Hoja1Tema3;
 
 public class Main {
     public static void main(String[] args){
-        Persona p1 = new Persona("Generico", 23, "hombre", "estudiante");
+        Rectangulo r1 = new Rectangulo(5, 10, "verde");
 
+        r1.calcularPerimetro();
 
-        p1.saludar();
-        p1.setEdad(17);
-        System.out.println(p1.esMayorEdad());
+        r1.calcularArea();
+
+        double perimetro = r1.calcularPerimetro();
+        double area = r1.calcularArea();
+
+        System.out.println(perimetro+"\t"+area);
     }
 }
