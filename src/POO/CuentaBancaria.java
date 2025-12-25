@@ -1,4 +1,6 @@
 package POO;
+import java.util.Scanner;
+
 /*CLASE PARA MODELAR LAS CUENTAS*/
 public class CuentaBancaria {
     private String titular;
@@ -6,7 +8,6 @@ public class CuentaBancaria {
     private  int numCuenta;
 
     CuentaBancaria (String titular, double saldoInicial, int numCuenta) {
-
         this.titular = titular;
 
         if (saldoInicial > 0)
@@ -15,9 +16,6 @@ public class CuentaBancaria {
         if (numCuenta <= 0)
             this.numCuenta = numCuenta;
     }
-
-
-
 
 
     boolean depositar(double cantidad){

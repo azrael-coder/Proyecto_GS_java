@@ -2,15 +2,22 @@ package POO;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        GestorCuentas registrar = new GestorCuentas();
+        String opcion;
+
+        do{
+            registrar.registro();
 
 
-        CuentaBancaria c1 = new CuentaBancaria( "hans", 50, 1);
-        CuentaBancaria c2 = new CuentaBancaria( "javi", 500, 2);
+            System.out.println("Quiere cerrar sesion?[s/n]: ");
+             opcion = sc.nextLine();
 
 
 
-        c1.mostrarInfo();
-        c2.mostrarInfo();
+        }while(opcion.equalsIgnoreCase("n"));
+
+
 
 
 
