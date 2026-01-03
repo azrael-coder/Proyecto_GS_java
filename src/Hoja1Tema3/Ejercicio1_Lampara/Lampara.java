@@ -32,7 +32,6 @@ public class Lampara {
 
     private void cambiarEstado(boolean estado) {
        this.encendido = estado;
-
     }
 
 
