@@ -76,7 +76,6 @@ public class Juego_adivinar {
 
             }
 
-
         }
         Animacion.animacion();
     }
