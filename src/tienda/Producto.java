@@ -40,7 +40,7 @@ public class Producto {
     }
 
     public String mostrarInfo(){
-        return "Producto: "+nombre+" ,Precio: "+precio+"€"+" ,Stock: "+stock;
+        return "Producto: "+nombre+" ,Precio: "+precio+"€"+" ,Stock: "+stock + "\n";
     }
 
 
