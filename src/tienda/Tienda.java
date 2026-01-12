@@ -7,8 +7,15 @@ public class Tienda {
     private Producto p2;
     private Producto p3;
 
+    Tienda(){
+        nombre=null;
+        direccion=null;
+        p1=null;
+        p2=null;
+        p3=null;
+    }
 
-    Tienda(String nombre, String direccion, Producto p1, Producto p2, Producto p3){
+    Tienda(String nombre, String direccion,  Producto p1, Producto p2, Producto p3 ){
         this.nombre= nombre;
         this.direccion= direccion;
         this.p1 = p1;
@@ -16,54 +23,50 @@ public class Tienda {
         this.p3 = p3;
     }
 
-    Tienda(){
-
-    }
-
-
-    //KK
     public String mostrarProductos(){
         String resultado = "";
 
-            if (p1 != null)
-                resultado = p1.mostrarInfo();
-
-            if (p2 != null)
-                resultado= p2.mostrarInfo();
-
-            if (p3 != null)
-                resultado = p3.mostrarInfo();
-
-            if (resultado.equalsIgnoreCase(""));
-            resultado = "No hay de ese producto";
-
-            return resultado;
-    }
-
-    public String venderProducto(String nombre, int cantidad){
-        double totalVenta = 0;
-        String resultado = "";
-        if (p1.getNombre().equalsIgnoreCase(nombre) && cantidad > p1.getStock()){
-            p1.setStock(p1.getStock() - cantidad);
-
-            totalVenta = cantidad * p1.getPrecio();
-            resultado = "Total a pagar: "+totalVenta;
-
-        } else if (p2.getNombre().equalsIgnoreCase(nombre) && cantidad > p2.getStock()) {
-            p2.setStock(p2.getStock() - cantidad);
-
-            totalVenta = cantidad * p2.getPrecio();
-            resultado = "Total a pagar: "+totalVenta;
-
-        } else if (p3.getNombre().equalsIgnoreCase(nombre) && cantidad > p2.getStock()) {
-            p3.setStock(p3.getStock() - cantidad);
-
-            totalVenta = cantidad * p3.getPrecio();
-            resultado = "Total a pagar: "+totalVenta;
+        if (p1==null){
+            resultado+= "La tienda no tiene el producto1";
+        } else {
+            resultado += p1.mostrarInfo() + "\n";
         }
 
-        //Poner el aviso por si no hay
+        if (p2==null){
+            resultado+= "La tienda no tiene el producto1";
+        } else {
+            resultado += p2.mostrarInfo() + "\n";
+        }
+
+        if (p3==null){
+            resultado+= "La tienda no tiene el producto1";
+        } else {
+            resultado += p3.mostrarInfo() + "\n";
+        }
+
 
         return resultado;
+    }
+
+    public String venderProducto(String nombre, int cantidad) {
+        double tVenta = 0;
+        String resultado = "No hay de ese producto o no hay stock";
+
+        if (p1.getNombre().equalsIgnoreCase(nombre) && cantidad <= p1.getStock()) {
+            resultado = p1.reducirStock(cantidad);
+            tVenta = p1.getPrecio() * cantidad;
+
+        } else if (p2.getNombre().equalsIgnoreCase(nombre) && cantidad <= p2.getStock()) {
+            resultado = p2.reducirStock(cantidad);
+            tVenta = p2.getPrecio() * cantidad;
+
+        } else if (p3.getNombre().equalsIgnoreCase(nombre) && cantidad <= p3.getStock()) {
+            resultado = p3.reducirStock(cantidad);
+            tVenta = p3.getPrecio() * cantidad;
+        }
+
+
+
+        return resultado + "\n"+ "Precio: "+tVenta+"€";
     }
 }

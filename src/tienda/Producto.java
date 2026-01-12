@@ -31,7 +31,7 @@ public class Producto {
         String mensaje;
         if (cantidad > 0 && stock > cantidad){
             stock -= cantidad;
-            mensaje = "Reduccion de stock correcta";
+            mensaje = "Reduccion de stock correcta, stock actual: " + stock;
         }
         else
             mensaje = "No hay stock suficiente";
@@ -40,7 +40,7 @@ public class Producto {
     }
 
     public String mostrarInfo(){
-        return "Producto: "+nombre+" ,Precio: "+precio+"€"+" ,Stock: "+stock + "\n";
+        return "Producto: "+nombre+" ,Precio: "+precio+"€"+" ,Stock: "+stock;
     }
 
 
