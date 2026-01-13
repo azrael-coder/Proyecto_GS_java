@@ -8,18 +8,18 @@ public class Circulo {
      * @param radio radio del circulo
      */
     Circulo (double radio) {
-        validarRadio(radio);
         this.radio = radio;
+        validarRadio();
     }
 
     Circulo() {
         this(1.0);
-        validarRadio(radio);
+        validarRadio();
     }
 
-    private double validarRadio (double radio){
-        if (radio < 0)
-            radio = 1.0;
+    private double validarRadio (){
+        if (radio <= 0)
+            radio= 1;
 
         return radio;
     }
@@ -38,4 +38,10 @@ public class Circulo {
         double perimetro = calcularPerimetro();
         System.out.println("Radio actual: " + radio + "\n"+" Area: " + area + "\n" + " Perimetro: " + perimetro);
     }
+
+    public void setRadio(double radio){
+        if (radio > 0)
+            this.radio= radio;
+    }
 }
+
