@@ -10,7 +10,7 @@ public class Main {
         Tienda t1 = new Tienda("MiniMarket", "Avenida Central 45", p1, p2, p3);
 
 
-        System.out.println( t1.venderProducto("Agua Mineral", 3));
+        System.out.println( t1.venderProducto("Agua Mineral", 2));
 
         System.out.println(t1.mostrarProductos());
     }

@@ -8,19 +8,20 @@ public class Circulo {
      * @param radio radio del circulo
      */
     Circulo (double radio) {
+        validarRadio(radio);
         this.radio = radio;
-        validarRadio();
     }
 
     Circulo() {
         this(1.0);
-        validarRadio();
-
+        validarRadio(radio);
     }
 
-    private void validarRadio (){
-        if (radio <= 0)
+    private double validarRadio (double radio){
+        if (radio < 0)
             radio = 1.0;
+
+        return radio;
     }
 
 

@@ -41,7 +41,7 @@ public class Lampara {
     void mostrarEstado () {
         String estado;
         estado = encendido ? "encendida" : "apagada";
-        System.out.println("La lampara esta: "+estado);
+        System.out.println("La lampara esta: "+estado+" y es de color: "+color);
     }
 
     public String getColor(){

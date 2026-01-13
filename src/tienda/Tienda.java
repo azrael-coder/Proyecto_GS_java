@@ -50,7 +50,7 @@ public class Tienda {
 
     public String venderProducto(String nombre, int cantidad) {
         double tVenta = 0;
-        String resultado = "No hay de ese producto o no hay stock";
+        String resultado = "No hay stock";
 
         if (p1.getNombre().equalsIgnoreCase(nombre) && cantidad <= p1.getStock()) {
             resultado = p1.reducirStock(cantidad);

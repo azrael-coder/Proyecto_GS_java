@@ -4,11 +4,10 @@ public class Main {
 
         Lampara l1 = new Lampara("Rojo", true);
 
-        //l1.apagar();
+        l1.apagar();
 
         l1.setColor("Azul");
 
-        System.out.println(l1.getColor());
         l1.mostrarEstado();
     }
 }
