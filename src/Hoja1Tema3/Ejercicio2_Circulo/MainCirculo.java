@@ -8,7 +8,7 @@ public class MainCirculo {
         System.out.println("Ingrese el radio: ");
         double radio = sc.nextDouble();
 
-        Circulo c1 = new Circulo(radio);
+        Circulo c1 = new Circulo(-3);
         c1.mostrarInfo();
     }
 }
