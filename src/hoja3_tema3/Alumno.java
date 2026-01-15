@@ -25,7 +25,7 @@ public class Alumno {
         return (edad_Alumno >= EDAD_MINIMA);
     }
 
-    public String edadMinima(){
+    public static String edadMinima(){
         return "Edad minima permitida: "+EDAD_MINIMA;
     }
 

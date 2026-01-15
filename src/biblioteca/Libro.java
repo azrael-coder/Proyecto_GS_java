@@ -18,7 +18,7 @@ public class Libro {
 
 
     public String prestarEjemplar (int cantidad){
-        String resultado = "No se puede realizar el prestamo";
+        String resultado = "";
 
         if (cantidad <= stock){
             stock -= cantidad;
@@ -31,7 +31,7 @@ public class Libro {
         return "Titulo: "+titulo+"\n"+
                 "Autor: "+autor+"\n"+
                 "Año: "+anioPublicacion+".\n"+
-                "Disponibles: "+stock;
+                "Disponibles: "+stock+"\n";
     }
 
     public String getTitulo() {
