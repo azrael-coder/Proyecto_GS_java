@@ -7,9 +7,9 @@ public class Main {
         Alumno alumno2 = new Alumno("Alejandro", 19);
 
 
-        System.out.println(alumno1.mostrarInfo());
+        System.out.println(alumno2.mostrarInfo());
 
-        System.out.println(Alumno.totalAlumnos + "\n" + Alumno.edadMinima());
+        System.out.println(Alumno.cantidadAlumn() + "\n" + Alumno.edadMinima());
 
         System.out.println(alumno2.validarEdad());
     }
