@@ -7,11 +7,13 @@ public class ManejoString {
      */
     public static int posicionA (String cadena){
         int posicion = -1;
-        String toLower= cadena.toLowerCase();
-        for (int i = 1; i< toLower.length(); i++){
-            if (toLower.charAt(i) == 'a'){
-                posicion = i;
-                i = cadena.length()+1;
+        if (cadena != null) {
+
+            for (int i = 0; i < cadena.length(); i++) {
+                if ((cadena.charAt(i) == 'a') || (cadena.charAt(i) == 'A')) {
+                    posicion = i;
+                    i = cadena.length() + 1;
+                }
             }
         }
         return posicion;
@@ -21,16 +23,17 @@ public class ManejoString {
     /**
      * Metodo usando indexOf para encontrar el caracter "a"
      */
-    /*public static int posicion (String cadena, char caracter){
-        if (cadena.indexOf(caracter)){
-
+    public static int posicion (String cadena){
+        int pos= -1;
+        if (cadena != null) {
+            pos= cadena.indexOf('a');
         }
 
-        return
+        return pos;
     }
-    */
+
     public static void main(String[] args){
-        int a= posicionA("Mamaguevo");
+        int a= posicionA("caracter a");
         System.out.println(a);
     }
 }
