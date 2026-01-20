@@ -1,4 +1,4 @@
-package Hoja2;
+package Hoja2_tema1;
 import java.util.Scanner;
 public class Ejercicio3 {
      static void main (){
