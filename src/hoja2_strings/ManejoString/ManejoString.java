@@ -55,7 +55,6 @@ public class ManejoString {
         return posicion;
     }
 
-
     /**
      * Metodo usando indexOf para encontrar el caracter "a"
      */
