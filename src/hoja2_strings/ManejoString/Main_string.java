@@ -1,5 +1,7 @@
 package hoja2_strings.ManejoString;
-
+/**
+ * @author Israel
+ */
 public class Main_string {
     public static void main(String[] args) {
         //System.out.println(ManejoString.rotar("Hola"));
@@ -8,7 +10,7 @@ public class Main_string {
 
         /**
          * System.out.println(Ejercicio8.buscarVeces("Hola","Hola Mundo Hola"));
-         * CORREGIR ESTE METODO !!Buble infinito!!
+         * !!Bucle infinito!!
          */
 
 
@@ -19,5 +21,8 @@ public class Main_string {
         //Ejercicio11.imprimirCadenaLarga("abcdefghijklomo esta es mas corta");
 
         //Ejercicio12.imprimirSiglas("Organizacion Naciones Inutiles");
+        //System.out.println(Ejercicio13.ponerCaracterMayuscula("La cadena",'a'));
+
+
     }
 }

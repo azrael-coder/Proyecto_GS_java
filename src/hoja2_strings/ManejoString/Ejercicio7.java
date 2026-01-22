@@ -11,9 +11,9 @@ public class Ejercicio7 {
 
                 //Ha encontrado la palabra sino devuelve -1
                 if (pos != -1) {
-
+                    sfinal = cadena.substring(0,pos)+ "*" + cadena.substring(palabra.length());
                 }
-
+                posicion = pos+ palabra.length();
             }
 
         }

@@ -1,19 +1,10 @@
-package hoja2_strings.ej2;
+package hoja2_strings.ManejoString;
 
-public class Ej3 {
-    public static int numMinusculas(String cadena){
-        int minusculas = 0;
-        if (cadena.charAt(0) == 'a') {
-            for (int i = 0; i < cadena.length(); i++) {
-                if (cadena.charAt(i) >= 'a' && cadena.charAt(i) <= 'z') {
-                    minusculas++;
-                }
-            }
-        }
-
-        return minusculas;
-    }
-
+/**
+ * Método que reciba una cadena de caracteres y devuelva el número de
+ * mayúsculas que tiene la cadena
+ */
+public class Ejercicio4 {
     /**
      *
      * @param cadena
