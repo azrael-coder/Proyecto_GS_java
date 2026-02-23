@@ -1,6 +1,6 @@
 // @author_Azrael
 package Proyectos_personales;
-import Hoja4.Animacion;
+import Hoja4_Tema1.Animacion;
 import java.util.Random;
 import java.util.Scanner;
 public class Juego_adivinar {
