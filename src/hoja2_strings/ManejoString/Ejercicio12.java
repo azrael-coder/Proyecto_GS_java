@@ -13,6 +13,7 @@ public class Ejercicio12 {
         String palabra = "";
         String siglas = "";
         char char1;
+
         if(frase != null) {
 
             while (tk.hasMoreTokens()) {

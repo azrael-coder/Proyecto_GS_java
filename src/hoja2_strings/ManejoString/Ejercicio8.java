@@ -16,15 +16,16 @@ public class Ejercicio8 {
     public static int buscarVeces(String palabra, String cadena){
         int posicion = 0;
         int veces = 0;
+        int pos = 0;
 
         if(palabra != null && cadena != null){
-            while (posicion != -1){
+            while (pos != -1){
 
-                posicion = cadena.indexOf(palabra, posicion);
+                pos = cadena.indexOf(palabra, posicion);
                 //Aqui la encuentra si es que esta
-                if (posicion != -1){
+                if (pos != -1){
                     veces++;
-                    posicion =palabra.length();
+                    posicion =pos + palabra.length()+1;
                 }
             }
         }

@@ -12,15 +12,23 @@ public class Gerente  extends Empleado{
     public Gerente(String departamento) {
         super("Fulano",1100.50, LocalDate.now());
         this.departamento = departamento;
+
     }
+
+    public void aplicarBono(){
+        double salarioTotal = getSalario() + 500;
+        setSalario(salarioTotal);
+    }
+
 
 
     @Override
     public String toString() {
-        return super.toString() + "Gerente{" +
+        return super.toString() + " Gerente{" +
                 "departamento: " + departamento + '\'' +
                 '}';
     }
+
 
     public String getDepartamento() {
         return departamento;

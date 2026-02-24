@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Empleado {
     private String nombre;
     private double salario;
-    private LocalDate fechaNacer;
+    private LocalDate fechaNacimiento;
 
     public Empleado(){}
 
@@ -25,7 +25,7 @@ public class Empleado {
         if (fechaNacimiento != null) {
             int anios = (int) fechaNacimiento.toEpochDay(); //FechaNacimiento a dias
             if (anios >= 6570) {
-                fechaNacer = fechaNacimiento;
+                this.fechaNacimiento = fechaNacimiento;
             }
         }
 
@@ -41,7 +41,7 @@ public class Empleado {
         return "Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", salario=" + salario +
-                ", fechaNacimiento='" + fechaNacer.toString() + '\'' +
+                ", fechaNacimiento='" + fechaNacimiento.toString() + '\'' +
                 '}';
     }
 
@@ -64,10 +64,10 @@ public class Empleado {
     }
 
     public LocalDate getFechaNacimiento() {
-        return fechaNacer;
+        return fechaNacimiento;
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacer = fechaNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
     }
 }

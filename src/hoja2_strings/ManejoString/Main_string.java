@@ -8,10 +8,9 @@ public class Main_string {
         //System.out.println(ManejoString.rotarString("Hola"));
         //System.out.println(ManejoString.esPalindromo("XDDX"));
 
-        /**
-         * System.out.println(Ejercicio8.buscarVeces("Hola","Hola Mundo Hola"));
-         * !!Bucle infinito!!
-         */
+        System.out.println(Ejercicio7.marcarPalabra("mundo", "Hola mundo que tal mundo"));
+
+        //System.out.println(Ejercicio8.buscarVeces("Hola","Hola Mundo Hola")); //CORREGIDO !!!
 
 
         //System.out.println(Ejercicio9.buscarTokens("una palabra dos palabras"));
@@ -22,6 +21,7 @@ public class Main_string {
 
         //Ejercicio12.imprimirSiglas("Organizacion Naciones Inutiles");
         //System.out.println(Ejercicio13.ponerCaracterMayuscula("La cadena",'a'));
+
 
 
     }

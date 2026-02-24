@@ -10,6 +10,7 @@ public class Main {
         Gerente g2 = new Gerente();
 
         System.out.println(emple.toString());
+        g1.aplicarBono();
         System.out.println(g1.toString());
     }
 }

@@ -1,6 +1,12 @@
 package hoja2_strings.ManejoString;
 
 public class Ejercicio5 {
+    public static void main(String[] args) {
+        String palabra = "palabra";
+
+        System.out.println(rotar(palabra));
+    }
+
     /**
      *
      * @param cadena

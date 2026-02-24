@@ -18,12 +18,4 @@ public class Ejercicio13 {
         return resultado;
     }
 
-    public static String ponerCaracterMayuscula2(String cadena, char car){
-        String resultado="";
-        if (cadena != null){
-
-        }
-
-        return resultado;
-    }
 }
