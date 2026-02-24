@@ -1,38 +1,47 @@
 package POO.herencia;
+
+import java.time.LocalDate;
+
 /**
  * @author israel
  */
 public class Empleado {
     private String nombre;
     private double salario;
-    private String fechaNacimiento;
+    private LocalDate fechaNacer;
 
     public Empleado(){}
 
-    public Empleado(String nombre, double salario, String fechaNacimiento) {
+    public Empleado(String nombre, double salario, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         if (salario >= 0) {
             this.salario = salario;
         }
 
+        /**
+         * TODO A DIAS Y COMPARAR
+         * OPCION 1
+         */
         if (fechaNacimiento != null) {
-            this.fechaNacimiento = fechaNacimiento;
+            int anios = (int) fechaNacimiento.toEpochDay(); //FechaNacimiento a dias
+            if (anios >= 6570) {
+                fechaNacer = fechaNacimiento;
+            }
         }
+
+        /**
+         * OPCION 2
+         * SUMAR 18 A fechaNacimiento, SI  es mayor a la fecha actual tiene 18
+         */
+
     }
-
-
-
-
-
-
-
 
     @Override
     public String toString() {
         return "Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", salario=" + salario +
-                ", fechaNacimiento='" + fechaNacimiento + '\'' +
+                ", fechaNacimiento='" + fechaNacer.toString() + '\'' +
                 '}';
     }
 
@@ -54,11 +63,11 @@ public class Empleado {
         this.salario = salario;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
+    public LocalDate getFechaNacimiento() {
+        return fechaNacer;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacer = fechaNacimiento;
     }
 }

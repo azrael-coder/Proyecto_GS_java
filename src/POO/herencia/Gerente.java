@@ -1,5 +1,7 @@
 package POO.herencia;
 
+import java.time.LocalDate;
+
 public class Gerente  extends Empleado{
     private String departamento;
 
@@ -8,7 +10,7 @@ public class Gerente  extends Empleado{
     }
 
     public Gerente(String departamento) {
-        super("Fulano",1100.50,"23-02-2026");
+        super("Fulano",1100.50, LocalDate.now());
         this.departamento = departamento;
     }
 
@@ -16,7 +18,7 @@ public class Gerente  extends Empleado{
     @Override
     public String toString() {
         return super.toString() + "Gerente{" +
-                "departamento='" + departamento + '\'' +
+                "departamento: " + departamento + '\'' +
                 '}';
     }
 

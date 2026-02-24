@@ -1,8 +1,10 @@
 package POO.herencia;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-        Empleado emple = new Empleado("NPC",1000.50,"19-2-2003");
+        Empleado emple = new Empleado("NPC",1000.50, LocalDate.now());
 
         Gerente g1 = new Gerente("Informatica");
         Gerente g2 = new Gerente();
