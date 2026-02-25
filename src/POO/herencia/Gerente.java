@@ -9,11 +9,27 @@ public class Gerente  extends Empleado{
         super();
     }
 
-    public Gerente(String departamento) {
-        super("Fulano",1100.50, LocalDate.now());
+    /**
+     * ----- CONSTRUCTOR PRIMARIO -----
+     * @param departamento departamento
+     * @param nombre nombre
+     * @param salario salario
+     * @param fechaNacimiento fecha
+     */
+    public Gerente(String departamento, String nombre, double salario, LocalDate fechaNacimiento) {
+        super(nombre,salario, null);
         this.departamento = departamento;
-
     }
+
+
+    public Gerente(String departamento, String nombre) {
+        this(departamento,nombre,SALARIO_BASE,LocalDate.now());
+    }
+
+
+
+
+
 
     public void aplicarBono(){
         double salarioTotal = getSalario() + 500;
