@@ -10,7 +10,7 @@ public class Empleado {
     private String nombre;
     private double salario;
     private LocalDate fechaNacimiento;
-    protected static final double SALARIO_BASE = 15000;
+    protected static final double SALARIO_BASE = 1500;
 
     /**
      * CONSTRUCTORES
@@ -23,7 +23,7 @@ public class Empleado {
     }
 
     public Empleado (String nombre, LocalDate fechaNacimiento) {
-        this(nombre,0,fechaNacimiento);
+        this(nombre,SALARIO_BASE,fechaNacimiento);
     }
 
     public Empleado (String nombre){
@@ -45,7 +45,8 @@ public class Empleado {
             if (anios >= 6570) {
                 this.fechaNacimiento = fechaNacimiento;
             }
-        }
+        }else
+            this.fechaNacimiento = LocalDate.now();
 
         /**
          * OPCION 2
@@ -93,12 +94,12 @@ public class Empleado {
     @Override
     public boolean equals(Object o) {
         boolean igual = false;
-        if (o instanceof Empleado) {
 
 
-            if ( salario == ((Empleado)o).getSalario() &&
-                    nombre.equals(((Empleado) o).getNombre()) &&
-                    fechaNacimiento.equals(((Empleado) o).getFechaNacimiento() ) ) {
+        if (o instanceof Empleado emp) {
+            if ( salario == emp.getSalario() &&
+                    Objects.equals(nombre, emp.getNombre()) && //Objects.equals evita que salte la exepcion NPE si da el caso de que nombre o fechaNacimiento sean nulos
+                    Objects.equals(fechaNacimiento, emp.getFechaNacimiento()) ) {
 
                 igual = true;
             }

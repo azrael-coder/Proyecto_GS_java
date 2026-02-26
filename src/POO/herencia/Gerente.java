@@ -18,7 +18,7 @@ public class Gerente  extends Empleado{
      * @param fechaNacimiento fecha
      */
     public Gerente(String departamento, String nombre, double salario, LocalDate fechaNacimiento) {
-        super(nombre,salario, null);
+        super(nombre,salario, fechaNacimiento);
         this.departamento = departamento;
     }
 
@@ -32,7 +32,7 @@ public class Gerente  extends Empleado{
      * Metodo para aplicar un bono al salario
      */
     public void aplicarBono(){
-        double salarioTotal = getSalario() + 500;
+        double salarioTotal = super.getSalario() + 500;
         setSalario(salarioTotal);
     }
 
@@ -41,8 +41,8 @@ public class Gerente  extends Empleado{
     public boolean equals(Object o) {
         boolean iguales = false;
 
-        if (o instanceof Gerente) {
-            if (super.equals(o) && departamento.equalsIgnoreCase(((Gerente) o).getDepartamento())) {
+        if (o instanceof Gerente gerente) {
+            if (super.equals(o) && departamento.equalsIgnoreCase(gerente.getDepartamento() )) {
                 iguales = true;
             }
         }
