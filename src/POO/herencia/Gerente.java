@@ -1,6 +1,7 @@
 package POO.herencia;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Gerente  extends Empleado{
     private String departamento;
@@ -27,15 +28,26 @@ public class Gerente  extends Empleado{
     }
 
 
-
-
-
-
+    /**
+     * Metodo para aplicar un bono al salario
+     */
     public void aplicarBono(){
         double salarioTotal = getSalario() + 500;
         setSalario(salarioTotal);
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        boolean iguales = false;
+
+        if (o instanceof Gerente) {
+            if (super.equals(o) && departamento.equalsIgnoreCase(((Gerente) o).getDepartamento())) {
+                iguales = true;
+            }
+        }
+        return iguales;
+    }
 
 
     @Override

@@ -95,16 +95,14 @@ public class Empleado {
         boolean igual = false;
         if (o instanceof Empleado) {
 
-            /*
+
             if ( salario == ((Empleado)o).getSalario() &&
-                    nombre.equals(((Empleado) o).getNombre())) &&
-                    fechaNacimiento.equals(((Empleado) o).getFechaNacimiento()) ) {
+                    nombre.equals(((Empleado) o).getNombre()) &&
+                    fechaNacimiento.equals(((Empleado) o).getFechaNacimiento() ) ) {
 
                 igual = true;
             }
-             */
         }
-
         return igual;
     }
 
