@@ -34,7 +34,8 @@ public class Empleado {
         this.nombre = nombre;
         if (salario >= 0) {
             this.salario = salario;
-        }
+        }else
+            this.salario = SALARIO_BASE;
 
         /**
          * TODO A DIAS Y COMPARAR

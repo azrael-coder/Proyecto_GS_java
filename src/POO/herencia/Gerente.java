@@ -53,8 +53,8 @@ public class Gerente  extends Empleado{
     @Override
     public String toString() {
         return super.toString() + " Gerente{" +
-                "departamento: " + departamento + '\'' +
-                '}';
+                "departamento: " + departamento  +
+                '}' + '\n';
     }
 
 
@@ -64,5 +64,9 @@ public class Gerente  extends Empleado{
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
+    }
+
+    public void trabajarOficina(){
+        System.out.println("Trabajando oficina...");
     }
 }
