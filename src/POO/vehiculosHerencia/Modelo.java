@@ -1,5 +1,5 @@
 package POO.vehiculosHerencia;
 
 public enum Modelo {
-    BAJO, INTERMEDIO, ALTO;
+    BASICO, INTERMEDIO, ALTO;
 }
