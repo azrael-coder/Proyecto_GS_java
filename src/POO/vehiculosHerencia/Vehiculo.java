@@ -52,7 +52,9 @@ public class Vehiculo {
     }
 
     public void setCv(int cv) {
-        this.cv = cv;
+        if(cv > 0){
+            this.cv = cv;
+        }
     }
 
     public float getConsumo() {
@@ -60,7 +62,9 @@ public class Vehiculo {
     }
 
     public void setConsumo(float consumo) {
-        this.consumo = consumo;
+        if(consumo > 0){
+            this.consumo = consumo;
+        }
     }
 
     public double getPrecio() {
@@ -68,7 +72,9 @@ public class Vehiculo {
     }
 
     public void setPrecio(double precio) {
-        this.precio = precio;
+        if(precio > 0){
+            this.precio = precio;
+        }
     }
 
     public LocalDate getFechaLanzamiento() {
@@ -76,7 +82,9 @@ public class Vehiculo {
     }
 
     public void setFechaLanzamiento(LocalDate fechaLanzamiento) {
-        this.fechaLanzamiento = fechaLanzamiento;
+        if (fechaLanzamiento != null && fechaLanzamiento.isAfter(LocalDate.now())) {
+            this.fechaLanzamiento = fechaLanzamiento;
+        }
     }
 
     public Modelo getModelo() {

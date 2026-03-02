@@ -14,7 +14,9 @@ public class Coche  extends Vehiculo {
 
     public Coche(String marca, int cv,float consumo,double precio,LocalDate fechaLanzamiento,Modelo modelo,int numPuertas, String acabado) {
         super(marca, cv, consumo, precio, fechaLanzamiento, modelo);
-        this.numPuertas = numPuertas;
+        if (numPuertas > 0){
+            this.numPuertas = numPuertas;
+        }
         this.acabado = acabado;
     }
 
@@ -28,7 +30,7 @@ public class Coche  extends Vehiculo {
 
     public String mostrarExtras(){
        String resultado = "";
-        if (getModelo() == BASICO){
+        if (getModelo().equals(BASICO)){
             resultado = "Climatizador: No”, Llantas: No";
         }else if (getModelo() == INTERMEDIO){
             resultado = "Climatizador: Si”, Llantas: No";
