@@ -1,4 +1,9 @@
 package POO.figuras;
+/**
+ * @author Israel González Lopez
+ */
+
+import java.util.Scanner;
 
 public class Rectangulo extends FiguraGeometrica{
     private double base;
@@ -14,7 +19,7 @@ public class Rectangulo extends FiguraGeometrica{
     }
 
     /**
-     * metodo que devuelve el area
+     * metodo que devuelve el area segun los parametros que pase el usuario
      * @return area
      */
     public double calcularArea(){
@@ -22,18 +27,18 @@ public class Rectangulo extends FiguraGeometrica{
     }
 
     /**
-     * metodo que devuelve el perimetro
+     * metodo que devuelve el perimetro segun los parametros que pase el usuario
      * @return perimetro
      */
     public double calcularPerimetro(){
         return (base + altura) * 2;
     }
 
+
     @Override
     public String toString() {
         return super.toString() +
-                "base=" + base +
-                ", altura=" + altura +
-                '}';
+                " base=" + base +
+                ", altura=" + altura ;
     }
 }
