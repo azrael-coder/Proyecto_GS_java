@@ -1,4 +1,4 @@
-package POO;
+package POO.banco;
 import java.util.Scanner;
 
 /*CLASE PARA GESTIONAR LAS CUENTAS (registro, busquedas, etc)*/

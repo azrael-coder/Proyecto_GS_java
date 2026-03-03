@@ -1,5 +1,4 @@
-package POO;
-import java.util.Scanner;
+package POO.banco;
 
 /*CLASE PARA MODELAR LAS CUENTAS*/
 public class CuentaBancaria {
