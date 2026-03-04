@@ -45,21 +45,13 @@ public class Main {
                 }
 
                 case 3: {
-                    for (int i = 0; i < figura.length; i++){
-                        if (figura[i] instanceof Circulo cir){
-                            System.out.println(cir);
-                            System.out.println("Perimetro: " + cir.calcularPerimetro());
-                            System.out.println("Area: " + cir.calcularArea()) ;
+                    for (int i = 0; i < contador; i++){
+
+                            System.out.println(figura[i]);
+                            System.out.println("Perimetro: " + figura[i].calcularPerimetro());
+                            System.out.println("Area: " + figura[i].calcularArea()) ;
 
                             System.out.println();
-                        }
-                        else if (figura[i] instanceof Rectangulo rect){
-                            System.out.println(rect);
-                            System.out.println("Perimetro: " + rect.calcularPerimetro());
-                            System.out.println("Area: " + rect.calcularArea());
-
-                            System.out.println();
-                        }
                     }
                 }
                 break;
