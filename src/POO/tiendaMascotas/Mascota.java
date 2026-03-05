@@ -12,6 +12,7 @@ public abstract class Mascota {
         this.sexo = sexo;
     }
 
+
     //-------- METODOS ABSTRACTOS --------
     public abstract void decirAlgo();
     public abstract void gustosAlimentarios();
@@ -19,18 +20,36 @@ public abstract class Mascota {
 
 
     /**
-     * Devuelve un nombre aleatorio para mascotas
+     * Devuelve un nombre aleatorio para mascotas de sexo masculino
      * @return nombreMascota
      */
-    public String generarNombre(){
+    public static String generarNombreMasculino(){
         Random r = new Random();
         String nombreMascota = "";
         int nombreAleatorio =  r.nextInt(10);
-        String[] nombres = {"Luna", "Milo","Coco", "Bruno ", "Zoe", "Nugget", "Sia", "Dante", "Fideo", "Arya"};
+        String[] nombres = {"Thomas", "Milo","Coco", "Bruno ", "Marshall", "Nugget", "Tequila", "Dante", "Fideo", "Sheldon"};
 
             for (int i=0; i < nombres.length; i++){
                 nombreMascota = nombres[nombreAleatorio];
             }
+
+        return nombreMascota;
+    }
+
+
+    /**
+     * Devuelve un nombre aleatorio para mascotas de sexo femenino
+     * @return nombreMascota
+     */
+    public static String generarNombreFemenino(){
+        Random r = new Random();
+        String nombreMascota = "";
+        int nombreAleatorio =  r.nextInt(10);
+        String[] nombres = {"Luna", "Bella","Nala", "Kira ", "Zoe", "Lola", "Sia", "Maia", "Alma ", "Arya"};
+
+        for (int i=0; i < nombres.length; i++){
+            nombreMascota = nombres[nombreAleatorio];
+        }
 
         return nombreMascota;
     }
