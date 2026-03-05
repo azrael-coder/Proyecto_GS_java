@@ -19,15 +19,27 @@ public class Perro extends Mascota {
     }
 
     @Override
-    public Mascota cruzar(Mascota mascota){
+    public Mascota cruzar(Mascota pareja){
+        Mascota cria = null;
 
-        if (!(mascota instanceof Perro p)){
+        if (!(pareja instanceof Perro p) && pareja != null && pareja.getSexo() != super.getSexo()){
             return null;
         } else{
-            return mascota;
+            String nuevaRaza= raza;
+            if (this.raza.equals(p.getRaza()) ){
+                nuevaRaza = "mezcla";
+            }
+            cria = new Perro(pareja.generarNombre(),Sexo.MASCULINO,nuevaRaza);
+            return cria;
         }
 
     }
 
+    public String getRaza() {
+        return raza;
+    }
 
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
 }
