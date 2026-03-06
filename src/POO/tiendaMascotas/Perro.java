@@ -1,7 +1,5 @@
 package POO.tiendaMascotas;
 
-import java.util.Random;
-
 public class Perro extends Mascota {
     private String raza;
 
@@ -28,49 +26,34 @@ public class Perro extends Mascota {
      */
     @Override
     public Mascota cruzar(Mascota pareja){
-        Mascota cria;
+        Mascota cria = null;
 
-        if (!(pareja instanceof Perro) && pareja != null && pareja.getSexo() != super.getSexo()){ //FALLO AQUI
-            return null;
-        }
-        else{
+        if ((pareja instanceof Perro) && pareja != null && pareja.getSexo() != super.getSexo()){ //FALLO AQUI(arreglado)
             String nuevaRaza= raza;
 
             // Si la raza es distinta se asigna a mezcla, sino se deja la de los padres
-            if (!this.raza.equals( ((Perro) pareja).getRaza() )){
+            if (!this.raza.equalsIgnoreCase( ((Perro) pareja).getRaza() )){
                 nuevaRaza = "mezcla";
             }
 
             if (asignarSexo() == Sexo.MASCULINO){
-                cria = new Perro(generarNombreMasculino(), Sexo.MASCULINO, nuevaRaza);
+                cria = new Perro(generarNombres(Sexo.MASCULINO), Sexo.MASCULINO, nuevaRaza);
             }
             else
-                cria = new Perro(generarNombreFemenino(), Sexo.FEMENINO, nuevaRaza);
+                cria = new Perro(generarNombres(Sexo.FEMENINO), Sexo.FEMENINO, nuevaRaza);
 
             return cria;
         }
+
+        else{
+            return null;
+        }
     }
 
-    /**
-     * Devuelve el Sexo que tendra la cria de forma aleatoria
-     * @return el sexo que tendra la cria
-     */
-    private static Sexo asignarSexo(){
-        Sexo sexo;
-        Random rand = new Random();
-        int r = rand.nextInt(2);
-
-        if(r == 0)
-            sexo = Sexo.MASCULINO;
-        else
-            sexo = Sexo.FEMENINO;
-
-        return sexo;
-    }
 
     @Override
     public String toString() {
-        return super.toString() + " raza: " + raza ;
+        return super.toString() + " Tipo: Perro" + " raza: " + raza ;
     }
 
     public String getRaza() {
