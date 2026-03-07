@@ -10,7 +10,11 @@ public class Main {
         Gato g2 = new Gato("Gata",Sexo.FEMENINO,"Gato negro");
         Mascota criaGato = g1.cruzar(g2);
 
-        Mascota[] mascotas = {p1,p2,cria,g1,g2,criaGato};
+        Cobaya cobaya1 = new Cobaya("cobaya1",Sexo.MASCULINO,"Con manchas");
+        Cobaya cobaya2 = new Cobaya("cobaya2",Sexo.FEMENINO,"Gris");
+        Mascota criaCobaya = cobaya1.cruzar(cobaya2);
+
+        Mascota[] mascotas = {p1,p2,cria,g1,g2,criaGato, criaCobaya};
 
         for (Mascota mascota : mascotas) {
             System.out.println(mascota);

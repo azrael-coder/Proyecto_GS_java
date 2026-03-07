@@ -28,7 +28,7 @@ public class Perro extends Mascota {
     public Mascota cruzar(Mascota pareja){
         Mascota cria = null;
 
-        if ((pareja instanceof Perro) && pareja != null && pareja.getSexo() != super.getSexo()){ //FALLO AQUI(arreglado)
+        if ((pareja instanceof Perro) && pareja.getSexo() != super.getSexo()){ //FALLO AQUI(arreglado)
             String nuevaRaza= raza;
 
             // Si la raza es distinta se asigna a mezcla, sino se deja la de los padres
@@ -42,12 +42,8 @@ public class Perro extends Mascota {
             else
                 cria = new Perro(generarNombres(Sexo.FEMENINO), Sexo.FEMENINO, nuevaRaza);
 
-            return cria;
         }
-
-        else{
-            return null;
-        }
+        return cria;
     }
 
 
