@@ -2,6 +2,7 @@ package ejerProductos;
 
 public class Electronico extends Producto {
     private int potencia;
+    final int EFICIENTE = 100;
 
     public Electronico(String nombre, double precio,int potencia) {
         super(nombre, precio);
@@ -14,7 +15,7 @@ public class Electronico extends Producto {
      * @return true o false
      */
     public boolean esEficiente(){
-        return (potencia < 100);
+        return (potencia < EFICIENTE);
     }
 
     /**
@@ -29,6 +30,15 @@ public class Electronico extends Producto {
                     resultado = true;
             }
         return resultado;
+    }
+
+    /**
+     * Metodo para clonar objetos de tipo Electronico
+     * @return
+     */
+    public Electronico clone(){
+        Electronico clone = new Electronico(new String (super.getNombre()), super.getPrecio(), potencia);
+        return clone;
     }
 
     @Override
