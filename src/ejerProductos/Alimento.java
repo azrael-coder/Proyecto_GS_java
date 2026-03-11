@@ -2,6 +2,7 @@ package ejerProductos;
 
 public class Alimento extends Producto {
     private int calorias;
+    public final int BAJO_CALORIAS = 100;
 
     public Alimento(String nombre,double precio,int calorias) {
         super(nombre,precio);
@@ -9,7 +10,7 @@ public class Alimento extends Producto {
     }
 
     public boolean esBajoCalorias(){
-        return (calorias < 100);
+        return (calorias < BAJO_CALORIAS);
     }
 
     /**
@@ -27,6 +28,11 @@ public class Alimento extends Producto {
             }
         return resultado;
 
+    }
+
+    public Alimento clone(){
+        Alimento clone = new Alimento(new String (super.getNombre()), super.getPrecio(), calorias);
+        return clone;
     }
 
 
