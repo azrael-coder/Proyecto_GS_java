@@ -16,7 +16,7 @@ public abstract class Producto implements Comparable<Producto>, Cloneable{
 
     public double descuento(float descuento) {
         if (descuento > 0 && descuento <= 100) {
-            precio = (precio * descuento) / 100;
+            precio = precio - (precio * descuento) / 100;
         }
 
         return precio;
@@ -89,5 +89,9 @@ public abstract class Producto implements Comparable<Producto>, Cloneable{
 
     public double getPrecio() {
         return precio;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
