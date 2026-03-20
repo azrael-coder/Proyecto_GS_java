@@ -1,4 +1,4 @@
-package ejerProductos;
+package POO.ejerProductos;
 
 public class Electronico extends Producto {
     private int potencia;
@@ -6,7 +6,9 @@ public class Electronico extends Producto {
 
     public Electronico(String nombre, double precio,int potencia) {
         super(nombre, precio);
-        this.potencia = potencia;
+        if (potencia > 0){
+            this.potencia = potencia;
+        }
     }
 
 
@@ -31,6 +33,8 @@ public class Electronico extends Producto {
             }
         return resultado;
     }
+
+
 
     /**
      * Metodo para clonar objetos de tipo Electronico

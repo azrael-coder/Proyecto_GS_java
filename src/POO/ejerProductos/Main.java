@@ -1,4 +1,4 @@
-package ejerProductos;
+package POO.ejerProductos;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -39,7 +39,7 @@ public class Main {
             }
 
             if (i == descuentoAleatorio){
-                productos[i].setPrecio(  productos[i].getPrecio() - productos[i].descuento(10)  );
+                productos[i].setPrecio(productos[i].descuento(10));
                 System.out.println("Menos 10% al precio de: " + productos[i]);
                 System.out.println(productos[i].getPrecio());
             }
