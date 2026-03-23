@@ -1,4 +1,4 @@
-package Interfaces.contenedorPrincipal;
+package Interfaces.prueba;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,16 +16,17 @@ public class VentanaPrincipal extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        boton1 = new JButton("Aceptar");
-        this.add(boton1);
-
-        boton2 = new JButton("Cancelar");
-        this.add(boton2);
-
-
         panelPrincipal = new JPanel();
         this.setContentPane(panelPrincipal);
         panelPrincipal.setBackground(Color.CYAN);
+
+        boton1 = new JButton("Calcular");
+        boton2 = new JButton("Limpiar");
+
+        this.add(boton2);
+        this.add(boton1);
+
+        boton1.setLocation(500,45);
 
     }
 
