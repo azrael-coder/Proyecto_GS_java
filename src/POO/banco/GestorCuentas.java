@@ -30,5 +30,58 @@ public class GestorCuentas {
         System.out.println("Cuenta registrada correctamente");
     }
 
+    boolean depositar(CuentaBancaria cuenta, double cantidad){
+        boolean depositado = false;
+        if (cantidad > 0) {
+             cuenta.setSaldo(cuenta.getSaldo() + cantidad);
+            depositado = true;
+        }
+        return depositado;
+    }
+
+
+    boolean retirar(CuentaBancaria cuenta,double cantidad) {
+        if (cantidad > 0 && cuenta.getSaldo() >= cantidad){
+            cuenta.setSaldo(cuenta.getSaldo() - cantidad);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    /*
+
+
+    public String mostrarInfo(){
+        String resultado = "";
+
+        resutlado
+        System.out.println("Titular: "+titular);
+        System.out.println("Saldo: "+saldo);
+        System.out.println("Numero de cuenta: "+numCuenta);
+        System.out.println("----------");
+    }
+
+
+    /**
+     * Transferencias entre cuentas
+     * @param cantidad es validado antes de ejecutarse
+     * @param otraCuenta otro objeto como parametro
+     * @return true o false dependendiendo si falla o es exitosa
+     */
+    /*
+    boolean transferir (double cantidad, CuentaBancaria otraCuenta ){
+        if (cantidad > 0 && saldo >= cantidad && otraCuenta != null) {
+            this.retirar(cantidad);
+            otraCuenta.depositar(cantidad);
+            return true;
+        }else
+            System.out.println("Transferencia rechazada");
+        return false;
+
+    }
+     */
+
 
 }
+
